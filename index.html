@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="AB.svg" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css"
@@ -12,24 +13,32 @@
     />
     <link rel="stylesheet" href="./src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agus Page</title>
+    <title>Soy Agustin</title>
   </head>
   <body>
     <h1>Agustin Basilio</h1>
-    <h2>Tecnico en desarrollo de aplicaciones multiplataforma</h2>
-    <h4>C#.NET</h4>
+    <h2>
+      Tecnico en desarrollo de aplicaciones multiplataforma <br />
+      C#.NET
+    </h2>
     <article>
-      <h5>Contactame!</h5>
-      <div style="display: flex; align-items: baseline">
+      <h2>Contacto</h2>
+      <div
+        title="contact reference: e-mail"
+        style="display: flex; align-items: baseline"
+      >
         <p>jobsagustinbasilio@gmail.com</p>
         <span class="icon tooltip" onclick="copyEmail()">
           <span class="material-symbols-outlined"> content_copy </span>
-          <i id="tooltip-copy-email" class="tooltiptext">copy e-mail address</i>
+          <i
+            id="tooltip-copy-email"
+            class="tooltiptext tooltiptext-black-border-color"
+            >copy e-mail address</i
+          >
         </span>
         <a href="mailto:jobsagustinbasilio@gmail.com"></a>
       </div>
-    </article>
-    <ol>
+      <h2>Descarga mi Curriculum</h2>
       <li>
         cv (<a href="./src/CVs/CV Agustin Omar Basilio.pdf" target="_blank"
           >Curriculum vitae in PDF format</a
@@ -37,20 +46,33 @@
           >Curriculum vitae in Word format</a
         >)
       </li>
-      <li>github</li>
-      <li>linkedin</li>
+      <h2>Visita mi repo</h2>
       <li>proyectos principales (descripcon, tec, image, code (github))</li>
+      <li><a href="https://github.com/AgBasilio">Repositorio de GitHub</a></li>
       <li>otros proyectos</li>
-      <li>habilidades tecnicas (en categorias)</li>
-      <li>habilidades blandas</li>
-      <li>roles desempenados</li>
-      <li>sobre mi</li>
-      <li>que estoy aprendiendo</li>
-      <li>experiencia laboral</li>
-      <li>formacion</li>
-      <li>certificaciones</li>
-      <li>idiomas</li>
-    </ol>
+      <h2>Habilidades</h2>
+      <h3>Tecnicas</h3>
+      <h4>cat. 1</h4>
+      <ul>
+        <li>hab. 1</li>
+        <li>hab. 2</li>
+        <li>hab. 3</li>
+      </ul>
+      <h4>cat. 2</h4>
+      <ul>
+        <li>hab. 1</li>
+        <li>hab. 2</li>
+        <li>hab. 3</li>
+      </ul>
+      <h3>Blandas</h3>
+      <h2>Roles</h2>
+      <h2>Sobre mi</h2>
+      <h2>Aprendiendo</h2>
+      <h2>Experiencia laboral</h2>
+      <h2>Formacion</h2>
+      <h2>Certificaciones</h2>
+      <h2>Idiomas</h2>
+    </article>
 
     <script>
       function copyEmail() {
@@ -58,12 +80,16 @@
         const element = document.getElementById("tooltip-copy-email");
         element.innerHTML = "Copied to clopboard";
         element.style.backgroundColor = "darkred";
+        element.classList.remove("tooltiptext-black-border-color");
+        element.classList.add("tooltiptext-darkred-border-color");
 
         const interval = 2 * 1000;
         setTimeout(() => {
           element.innerHTML = "copy e-mail address";
           element.style.backgroundColor = "black";
-        }, 2000);
+          element.classList.remove("tooltiptext-darkred-border-color");
+          element.classList.add("tooltiptext-black-border-color");
+        }, interval);
 
         navigator.clipboard.writeText("jobsagustinbasilio@gmail.com");
       }

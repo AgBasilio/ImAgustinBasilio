@@ -1,3 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+body {
+  border-radius: 25%;
+  border: 2rem dotted rgb(236 185 14 / 0.712);
+}
+a:hover {
+  text-decoration: none;
+}
+h2 {
+  border-top: 0.2rem solid;
+}
 .icon {
   align-self: center;
   cursor: pointer;
@@ -42,5 +60,12 @@
   margin-left: -5px;
   border-width: 5px; /*size of arrow */
   border-style: solid;
+}
+
+.tooltiptext-black-border-color::after {
   border-color: transparent transparent black transparent;
+}
+
+.tooltiptext-darkred-border-color::after {
+  border-color: transparent transparent darkred transparent;
 }
